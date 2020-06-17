@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="finalProjeModelStoreContainer" CdmEntityContainer="finalProjeEntities">
+    <EntitySetMapping Name="items">
+      <EntityTypeMapping TypeName="finalProjeModel.items">
+        <MappingFragment StoreEntitySet="items">
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="tur" ColumnName="tur" />
+          <ScalarProperty Name="konumu" ColumnName="konumu" />
+          <ScalarProperty Name="sorumlu" ColumnName="sorumlu" />
+          <ScalarProperty Name="durumu" ColumnName="durumu" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="diger" ColumnName="diger" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="finalProjeModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="seviye" ColumnName="seviye" />
+          <ScalarProperty Name="eposta" ColumnName="eposta" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="isim" ColumnName="isim" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="kullaniciadi" ColumnName="kullaniciadi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

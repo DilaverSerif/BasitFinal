@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="finalProjeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'finalProje.dbo.items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="items">
+    <Key>
+      <PropertyRef Name="adi" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="adi" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="tur" Type="varchar" MaxLength="50" />
+    <Property Name="konumu" Type="varchar" MaxLength="50" />
+    <Property Name="sorumlu" Type="varchar" MaxLength="50" />
+    <Property Name="durumu" Type="varchar" MaxLength="15" />
+    <Property Name="tarih" Type="varchar" MaxLength="15" />
+    <Property Name="diger" Type="nchar" MaxLength="100" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'finalProje.dbo.users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="kullaniciadi" Type="varchar" MaxLength="15" />
+    <Property Name="sifre" Type="varchar" MaxLength="15" />
+    <Property Name="isim" Type="varchar" MaxLength="25" />
+    <Property Name="telefon" Type="varchar" MaxLength="11" />
+    <Property Name="eposta" Type="varchar" MaxLength="25" />
+    <Property Name="seviye" Type="varchar" MaxLength="15" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="finalProjeModelStoreContainer">
+    <EntitySet Name="items" EntityType="Self.items" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [items].[adi] AS [adi], 
+    [items].[tur] AS [tur], 
+    [items].[konumu] AS [konumu], 
+    [items].[sorumlu] AS [sorumlu], 
+    [items].[durumu] AS [durumu], 
+    [items].[tarih] AS [tarih], 
+    [items].[diger] AS [diger], 
+    [items].[id] AS [id]
+    FROM [dbo].[items] AS [items]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="users" EntityType="Self.users" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [users].[kullaniciadi] AS [kullaniciadi], 
+    [users].[sifre] AS [sifre], 
+    [users].[isim] AS [isim], 
+    [users].[telefon] AS [telefon], 
+    [users].[eposta] AS [eposta], 
+    [users].[seviye] AS [seviye], 
+    [users].[id] AS [id]
+    FROM [dbo].[users] AS [users]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
